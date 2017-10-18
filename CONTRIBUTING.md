@@ -19,7 +19,7 @@ Thank you for considering to contribute to the harperdb-nodejs-driver project!
 # Writing your First PR
 0. Make sure to [maintain](#maintaining-your-fork) your local fork
 1. Create a branch on your local repo using `git checkout -b [branch-name]`
-2. Write you code 💻🔥
+2. Write your code 💻🔥
 3. Run `git status` to see all the files you have edited
 4. Add the files using `git add .`
 5. Run `git commit -m '[Commit Message'`
