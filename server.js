@@ -7,8 +7,8 @@ const db = new HarperDB();
 
 db.connect(
   "http://localhost:9925",
-  process.env.HARPERDB_USER,
-  process.env.HARPERDB_PWRD
+  process.env.HARPERDB_USERNAME,
+  process.env.HARPERDB_PASSWORD
 );
 
 fastify.get('/list_users', (request, reply) => {
