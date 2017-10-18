@@ -1,0 +1,7 @@
+.env
+/bin
+/node_modules
+.DS_Store
+install_log.log
+hdb_boot_properties.file
+user_guide.html
