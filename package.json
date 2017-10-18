@@ -1,34 +1,16 @@
 {
-  "name": "harperdb",
-  "version": "1.0.2",
-  "description": "HarperDB no-SQL SQL database written in node.js",
-  "main": "./bin/harperdb",
-  "bin": {
-    "harperdb": "./bin/harperdb"
-  },
+  "name": "harperdb-nodejs-driver",
+  "version": "0.0.1",
+  "description": "Node.JS Database Driver for HarperDB",
   "scripts": {
     "test": "./bin/functionalTest.js",
+    "init": "cd HarperDB/bin && ./harperdb install && cd ../.. && node genEnv.js",
     "start": "concurrently \"npm run db\" \"npm run server\"",
     "server": "nodemon server.js",
-    "db": "cd bin && ./harperdb run",
-    "stopDB": "cd bin && ./harperdb stop"
+    "db": "cd HarperDB/bin && ./harperdb run",
+    "stopDB": "cd HarperDB/bin && ./harperdb stop"
   },
-  "keywords": [
-    "database",
-    "no-sql",
-    "nosql",
-    "SQL",
-    "sequel",
-    "node.js",
-    "datastore",
-    "documentstore"
-  ],
-  "author": "team@harperdb.io",
-  "license": "All Rights Reserved",
-  "bugs": {
-    "url": "http://help.harperdb.io"
-  },
-  "homepage": "http://harperdb.io",
+  "author": "Ethan Arrowood",
   "dependencies": {
     "base-64": "^0.1.0",
     "dotenv": "^4.0.0",
