@@ -1,4 +1,4 @@
-var { HarperDB } = require("./HarperDB.js");
+var { HarperDB } = require("../HarperDB.js");
 var fastify = require("fastify")();
 require("dotenv").load();
 
