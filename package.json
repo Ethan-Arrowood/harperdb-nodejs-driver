@@ -5,7 +5,7 @@
   "scripts": {
     "test": "./bin/functionalTest.js",
     "init":
-      "cd HarperDB/bin && ./harperdb install && cd ../.. && node genEnv.js",
+      "cd HarperDB/bin && ./harperdb install && cd ../.. && node .genEnv.js",
     "start": "concurrently \"npm run db\" \"npm run server\"",
     "server": "nodemon server.js",
     "db": "cd HarperDB/bin && ./harperdb run",
