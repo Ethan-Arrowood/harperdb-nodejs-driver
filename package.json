@@ -4,14 +4,13 @@
   "description": "Node.JS Database Driver for HarperDB",
   "repository": "https://github.com/Ethan-Arrowood/harperdb-nodejs-driver.git",
   "scripts": {
-    "test": "./bin/functionalTest.js",
+    "test-harperDB": "./bin/functionalTest.js",
     "init":
       "cd HarperDB/bin && ./harperdb install && cd ../.. && node .genEnv.js",
-    "start": "concurrently \"npm run db\" \"npm run server\"",
-    "server": "nodemon server.js",
-    "db": "cd HarperDB/bin && ./harperdb run",
-    "stopDB": "cd HarperDB/bin && ./harperdb stop",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "example-fastify": "nodemon examples/fastify-example.js",
+    "start-harperDB": "cd HarperDB/bin && ./harperdb run",
+    "stop-harperDB": "cd HarperDB/bin && ./harperdb stop"
   },
   "lint-staged": {
     "*.{js,json,css}": ["prettier --write", "git add"]

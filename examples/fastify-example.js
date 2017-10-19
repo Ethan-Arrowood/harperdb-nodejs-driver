@@ -1,6 +1,5 @@
-var { HarperDB } = require("./HarperDB.js");
+var { HarperDB } = require("../HarperDB.js");
 var fastify = require("fastify")();
-var npmRunScript = require("npm-run-script");
 require("dotenv").load();
 
 const db = new HarperDB();
