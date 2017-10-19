@@ -2,10 +2,11 @@
   "name": "harperdb-nodejs-driver",
   "version": "0.0.1",
   "description": "Node.JS Database Driver for HarperDB",
+  "repository": "https://github.com/Ethan-Arrowood/harperdb-nodejs-driver.git",
   "scripts": {
     "test": "./bin/functionalTest.js",
     "init":
-      "cd HarperDB/bin && ./harperdb install && cd ../.. && node genEnv.js",
+      "cd HarperDB/bin && ./harperdb install && cd ../.. && node .genEnv.js",
     "start": "concurrently \"npm run db\" \"npm run server\"",
     "server": "nodemon server.js",
     "db": "cd HarperDB/bin && ./harperdb run",
@@ -16,6 +17,7 @@
     "*.{js,json,css}": ["prettier --write", "git add"]
   },
   "author": "Ethan Arrowood",
+  "license": "MIT",
   "dependencies": {
     "base-64": "^0.1.0",
     "dotenv": "^4.0.0",

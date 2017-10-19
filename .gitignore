@@ -1,4 +1,5 @@
 .env
+.jshintrc
 /hdb
 /node_modules
 .DS_Store
