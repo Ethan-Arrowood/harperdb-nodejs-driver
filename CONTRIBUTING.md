@@ -22,7 +22,7 @@ Thank you for considering to contribute to the harperdb-nodejs-driver project!
 2. Write your code 💻🔥
 3. Run `git status` to see all the files you have edited
 4. Add the files using `git add .`
-5. Run `git commit -m '[Commit Message'`
+5. Run `git commit -m '[Commit Message]'`
 6. And finally: `git push -u origin master`
 7. Navigate to your choice of browser and go to your fork repository
 8. There should be a prompt to open a new PR, click that.
