@@ -1,6 +1,6 @@
-var fs = require('fs');
+var fs = require("fs");
 
-consol.log('genEnv is Incomplete');
+console.log("genEnv is Incomplete");
 // Read HarperDB/install_log.log
 // Parse for Username & Password
 // Create .env file
