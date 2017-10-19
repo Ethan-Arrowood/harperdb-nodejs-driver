@@ -1,7 +1,7 @@
 var { HarperDB } = require("./HarperDB.js");
 var fastify = require("fastify")();
-var npmRunScript = require('npm-run-script');
-require('dotenv').load();
+var npmRunScript = require("npm-run-script");
+require("dotenv").load();
 
 const db = new HarperDB();
 
@@ -11,10 +11,11 @@ db.connect(
   process.env.HARPERDB_PASSWORD
 );
 
-fastify.get('/list_users', (request, reply) => {
-  db.request({ operation: 'list_users'})
+fastify.get("/list_users", (request, reply) => {
+  db
+    .request({ operation: "list_users" })
     .then(response => {
-      reply.send({ response })
+      reply.send({ response });
     })
     .catch(e => console.error(e));
 });
