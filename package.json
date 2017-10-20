@@ -5,7 +5,8 @@
   "repository": "https://github.com/Ethan-Arrowood/harperdb-nodejs-driver.git",
   "scripts": {
     "test-harperDB": "./bin/functionalTest.js",
-    "test": "mocha",
+    "test": "nyc --reporter=html --reporter=text mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls",
     "init":
       "cd HarperDB/bin && ./harperdb install && cd ../.. && node .genEnv.js",
     "precommit": "lint-staged && npm run test",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
     "eslint": "^4.9.0",
     "eslint-config-prettier": "^2.6.0",
     "eslint-config-standard": "^10.2.1",
@@ -40,6 +42,7 @@
     "lint-staged": "^4.3.0",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
+    "nyc": "^11.2.1",
     "prettier": "^1.7.4"
   }
 }
