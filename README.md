@@ -1,6 +1,6 @@
-# HarperDB Node.JS Driver
+# HarperDB Node.JS Driver [![Build Status](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver.svg?branch=master)](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver)
 
-## Created by Ethan Arrowood
+### Created by Ethan Arrowood
 
 After cloning project navigate to [HarperDB](http://products.harperdb.io/download/beta) and download the appropriate beta version.
 
