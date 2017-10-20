@@ -22,3 +22,17 @@ Want to test out the driver?
 Run `npm run start-harperDB` and then `npm run example-fastify`
 
 Then navigate to localhost:3000/list_users in your browser, and you should be greeted with a response from the server containing data from the database.
+
+
+## Documentation
+
+### Event Emitters
+The HarperDB Driver class is hooked up to a standard Node.JS core event emitter. From any server file you can add event hooks such as:
+
+```javascript
+const db = new HarperDB();
+db.event.on('connection', () => console.log('CONNECTED'));
+```
+
+Currently available events are as follows:
+`request`, `connection`, `error`
