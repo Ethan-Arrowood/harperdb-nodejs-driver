@@ -5,9 +5,10 @@
   "repository": "https://github.com/Ethan-Arrowood/harperdb-nodejs-driver.git",
   "scripts": {
     "test-harperDB": "./bin/functionalTest.js",
+    "test": "mocha",
     "init":
       "cd HarperDB/bin && ./harperdb install && cd ../.. && node .genEnv.js",
-    "precommit": "lint-staged",
+    "precommit": "lint-staged && npm run test",
     "example-fastify": "nodemon examples/fastify-example.js",
     "start-harperDB": "cd HarperDB/bin && ./harperdb run",
     "stop-harperDB": "cd HarperDB/bin && ./harperdb stop"
@@ -26,6 +27,7 @@
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "concurrently": "^3.5.0",
     "eslint": "^4.9.0",
     "eslint-config-prettier": "^2.6.0",
@@ -37,6 +39,7 @@
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
     "lint-staged": "^4.3.0",
+    "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
     "prettier": "^1.7.4"
   }
