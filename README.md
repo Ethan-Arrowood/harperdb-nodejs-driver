@@ -1,4 +1,4 @@
-# HarperDB Node.JS Driver [![Build Status](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver.svg?branch=master)](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver)
+# HarperDB Node.JS Driver [![Build Status](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver.svg?branch=master)](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver) [![Coverage Status](https://coveralls.io/repos/github/Ethan-Arrowood/harperdb-nodejs-driver/badge.svg?branch=master)](https://coveralls.io/github/Ethan-Arrowood/harperdb-nodejs-driver?branch=master)
 
 ### Created by Ethan Arrowood
 
