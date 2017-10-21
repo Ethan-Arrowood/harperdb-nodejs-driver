@@ -15,7 +15,7 @@
     "stop-harperDB": "cd HarperDB/bin && ./harperdb stop"
   },
   "lint-staged": {
-    "*.{js,json,css}": ["prettier --write", "git add"]
+    "*.js": ["prettier --write", "git add"]
   },
   "author": "Ethan Arrowood",
   "license": "MIT",

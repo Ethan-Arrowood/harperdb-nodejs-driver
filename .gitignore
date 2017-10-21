@@ -4,5 +4,6 @@
 /node_modules
 .DS_Store
 /HarperDB
+.nyc_output
 coverage
 .npmignore
