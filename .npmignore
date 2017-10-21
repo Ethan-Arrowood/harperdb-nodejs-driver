@@ -1,0 +1,12 @@
+.nyc_output
+coverage
+examples
+HarperDB
+hdb
+node_modules
+.env
+.eslintrc.json
+.genEnv.js
+.gitignore
+.travis.yml
+CONTRIBUTING.md

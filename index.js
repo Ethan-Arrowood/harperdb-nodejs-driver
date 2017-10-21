@@ -15,7 +15,12 @@ class HarperDB {
   }
 
   connect(url, username, password) {
-    if (arguments.length !== 3)
+    if (
+      arguments.length !== 3 ||
+      typeof url !== "string" ||
+      typeof username !== "string" ||
+      typeof password !== "string"
+    )
       throw new Error("Connect must be passed 3 arguments");
 
     const authorization = `Basic ${base64.encode(`${username}:${password}`)}`;

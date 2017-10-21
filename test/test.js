@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-var { HarperDB } = require("../HarperDB.js");
+var { HarperDB } = require("../index.js");
 
 describe("HarperDB", () => {
   describe("#constructor()", () => {
@@ -10,8 +10,12 @@ describe("HarperDB", () => {
     });
   });
   describe("#connect()", () => {
-    it("should throw error if not enough arguments are passed", () => {
+    it("should throw error if not enough or invalid arguments are passed", () => {
       var db = new HarperDB();
+      expect(function() {
+        expect(arguments).to.be.arguments;
+        db.connect(...arguments);
+      }).to.throw(Error);
       expect(() => db.connect()).to.throw(Error);
       expect(() => db.connect(1)).to.throw(Error);
       expect(() => db.connect(1, 2)).to.throw(Error);

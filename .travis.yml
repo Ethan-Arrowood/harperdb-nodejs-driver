@@ -1,5 +1,12 @@
 language: node_js
 
+notifications:
+  email:
+    recipients:
+      - ethan.arrowood@gmail.com
+    on_success: never # default: change
+    on_failure: always # default: always
+
 node_js:
   - "node"
 
