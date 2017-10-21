@@ -1,9 +1,9 @@
 .env
 .jshintrc
-/hdb
-/node_modules
+/hdb/**
+/node_modules/**
 .DS_Store
-/HarperDB
+/HarperDB/**
 .nyc_output
-/coverage
+/coverage/**
 .npmignore
