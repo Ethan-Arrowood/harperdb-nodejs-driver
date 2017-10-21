@@ -5,5 +5,5 @@
 .DS_Store
 /HarperDB
 .nyc_output
-coverage
+/coverage
 .npmignore
