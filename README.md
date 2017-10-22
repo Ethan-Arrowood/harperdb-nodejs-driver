@@ -1,5 +1,8 @@
 # HarperDB Node.JS Driver [![Build Status](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver.svg?branch=master)](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver) [![Coverage Status](https://coveralls.io/repos/github/Ethan-Arrowood/harperdb-nodejs-driver/badge.svg?branch=master)](https://coveralls.io/github/Ethan-Arrowood/harperdb-nodejs-driver?branch=master)
 
+[![https://nodei.co/npm/harperdb-nodejs-driver.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/harperdb-nodejs-driver.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/harperdb-nodejs-driver)
+
+
 ### Created by Ethan Arrowood
 
 After cloning project navigate to [HarperDB](http://products.harperdb.io/download/beta) and download the appropriate beta version.
