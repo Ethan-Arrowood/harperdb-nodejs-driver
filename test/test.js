@@ -7,6 +7,7 @@ var { HarperDB } = require("../index.js");
 
 chai.use(chaiAsPromised);
 var expect = chai.expect;
+var assert = chai.assert;
 
 describe("HarperDB", function() {
   describe("#constructor()", () => {
@@ -43,28 +44,62 @@ describe("HarperDB", function() {
       );
     });
 
-    it("should emit an error event on failed connect", function() {
+    it("should emit an error event on failed connect", function(done) {
       var db = new HarperDB();
       var spy = sinon.spy();
       db.event.on("error", spy);
 
-      try {
-        db.connect("x", "y", "z");
-      } catch (err) {
-        expect(err).to.be.an("error");
+      var connect = db.connect("x", "y", "z");
+
+      connect.then(() => {
         expect(spy.called).to.be.true;
-      }
+        done();
+      });
     });
 
-    it("should connect to server", function() {
+    it("should connect to server", function(done) {
       var db = new HarperDB();
       var spy = sinon.spy();
       db.event.on("connection", spy);
 
-      db.connect("http://httpbin.org/post", "y", "z", () => {
+      var connect = db.connect("http://httpbin.org/post", "y", "z");
+
+      connect.then(() => {
         expect(spy.called).to.be.true;
         expect(db.isConnected).to.be.true;
         expect(db.options).to.be.an("object");
+        done();
+      });
+    });
+  });
+  describe("#request()", function() {
+    it("should emit an error if not connect", function(done) {
+      var db = new HarperDB();
+      var spy = sinon.spy();
+      db.event.on("error", spy);
+
+      expect(() => db.request({ operation: "list_users" })).to.throw(
+        "Must connect to DB first using .connect()"
+      );
+
+      expect(db.isConnected).to.be.false;
+      expect(spy.called).to.be.true;
+      done();
+    });
+    it("should succesfully return request promise", function(done) {
+      var db = new HarperDB();
+      var spy = sinon.spy();
+      db.event.on("request", spy);
+
+      var connect = db.connect("http://httpbin.org/post", "y", "z");
+
+      connect.then(() => {
+        db.request({ operation: "list_users" }).then(() => {
+          expect(db.isConnected).to.be.true;
+          expect(db.options).to.be.an("object");
+          expect(spy.called).to.be.true;
+          done();
+        });
       });
     });
   });
