@@ -14,8 +14,8 @@ class HarperDB {
     this.event = new events.EventEmitter();
   }
 
-  connect(url, username, password) {
-    if (arguments.length !== 3)
+  connect(url, username, password, callback) {
+    if (arguments.length < 3)
       throw new Error("Connect must be passed 3 arguments");
     else if (
       typeof url !== "string" ||
@@ -44,9 +44,10 @@ class HarperDB {
         this.event.emit("connection");
         this.isConnected = true;
         this.options = options;
+        return callback();
       })
       .catch(error => {
-        this.event.emit("error");
+        this.event.emit("error", error);
       });
   }
 

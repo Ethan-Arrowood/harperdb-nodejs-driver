@@ -1,7 +1,12 @@
-var expect = require("chai").expect;
+var chai = require("chai");
+var chaiAsPromised = require("chai-as-promised");
+
 var sinon = require("sinon");
 
 var { HarperDB } = require("../index.js");
+
+chai.use(chaiAsPromised);
+var expect = chai.expect;
 
 describe("HarperDB", function() {
   describe("#constructor()", () => {
@@ -49,6 +54,18 @@ describe("HarperDB", function() {
         expect(err).to.be.an("error");
         expect(spy.called).to.be.true;
       }
+    });
+
+    it("should connect to server", function() {
+      var db = new HarperDB();
+      var spy = sinon.spy();
+      db.event.on("connection", spy);
+
+      db.connect("http://httpbin.org/post", "y", "z", () => {
+        expect(spy.called).to.be.true;
+        expect(db.isConnected).to.be.true;
+        expect(db.options).to.be.an("object");
+      });
     });
   });
 });
