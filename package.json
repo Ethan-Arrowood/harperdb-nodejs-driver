@@ -6,6 +6,7 @@
   "scripts": {
     "test-harperDB": "./bin/functionalTest.js",
     "test": "nyc --reporter=html --reporter=text mocha",
+    "test-watch": "mocha --watch",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "init": "cd HarperDB/bin && ./harperdb install && cd ../.. && node .genEnv.js",
     "precommit": "lint-staged && npm run test",
@@ -41,10 +42,12 @@
     "eslint-plugin-promise": "^3.6.0",
     "eslint-plugin-standard": "^3.0.1",
     "husky": "^0.14.3",
+    "just-extend": "^1.1.22",
     "lint-staged": "^4.3.0",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
     "nyc": "^11.2.1",
-    "prettier": "^1.7.4"
+    "prettier": "^1.7.4",
+    "sinon": "^4.0.1"
   }
 }
