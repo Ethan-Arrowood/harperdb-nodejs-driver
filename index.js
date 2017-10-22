@@ -15,13 +15,14 @@ class HarperDB {
   }
 
   connect(url, username, password) {
-    if (
-      arguments.length !== 3 ||
+    if (arguments.length !== 3)
+      throw new Error("Connect must be passed 3 arguments");
+    else if (
       typeof url !== "string" ||
       typeof username !== "string" ||
       typeof password !== "string"
     )
-      throw new Error("Connect must be passed 3 arguments");
+      throw new Error("connect() arguments must be strings");
 
     const authorization = `Basic ${base64.encode(`${username}:${password}`)}`;
 
@@ -35,19 +36,17 @@ class HarperDB {
       json: true
     };
 
-    rp({
+    return rp({
       ...options,
       body: { operation: "list_users" }
     })
       .then(() => {
         this.event.emit("connection");
-        console.log("Succesfully connected to server!");
         this.isConnected = true;
         this.options = options;
       })
       .catch(error => {
-        this.event.emit("error");
-        console.log(`Error: ${error.message}`);
+        this.event.emit("error", error);
       });
   }
 
