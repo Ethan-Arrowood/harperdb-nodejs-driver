@@ -10,4 +10,12 @@ notifications:
 node_js:
   - "node"
 
+deploy:
+  provider: npm
+  email: "ethan.arrowood@gmail.com"
+  api_key: "f6ac5dac-b27d-4ed2-b7d8-2344646cd6c4"
+  on:
+    tags: true
+    branch: master
+    
 after_success: npm run coverage
