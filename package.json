@@ -1,6 +1,6 @@
 {
   "name": "harperdb-nodejs-driver",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Node.JS Database Driver for HarperDB",
   "repository": "https://github.com/Ethan-Arrowood/harperdb-nodejs-driver.git",
   "scripts": {
