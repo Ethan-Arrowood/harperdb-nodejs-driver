@@ -8,6 +8,9 @@ I'll be deprecating this package and will be replacing it with something much mo
 
 ### Created by Ethan Arrowood
 
+
+## Contributing 
+
 After cloning project navigate to [HarperDB](http://products.harperdb.io/download/beta) and download the appropriate beta version.
 
 Decompress download and copy the `HarperDB` folder do this project directory.
@@ -31,6 +34,42 @@ Then navigate to localhost:3000/list_users in your browser, and you should be gr
 
 
 ## Documentation
+
+### Getting Started
+Install using: `npm install --save harperdb-nodejs-driver`
+
+Import into your project using: 
+```javascript
+var { HarperDB } = require('harperdb-nodejs-driver');
+```
+
+Create an instance of the HarperDB driver class like so:
+```javascript
+var db = new HarperDB();
+```
+
+*Before* you can make requests to HarperDB you need to use the `.connect()` method.
+
+```javascript
+db.connect(
+  <URL>,      // "http://localhost:9925"
+  <USERNAME>, // "admin"
+  <PASSWORD>  // "Password1!"
+);
+```
+The `.connect()` method will handle the base64 encoding of your username and password for the request header.
+
+Now you're ready to use the `.request()` method!
+
+`.request()` returns a Promise. As shown in `fastify-example.js`:
+```javascript
+db
+  .request({ operation: "list_users" })
+  .then(response => {
+    reply.send({ response });
+  })
+  .catch(e => console.error(e));
+```
 
 ### Event Emitters
 The HarperDB Driver class is hooked up to a standard Node.JS core event emitter. From any server file you can add event hooks such as:
