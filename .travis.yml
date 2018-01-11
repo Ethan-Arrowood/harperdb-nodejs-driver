@@ -9,14 +9,9 @@ node_js:
 - node
 deploy:
   provider: npm
-<<<<<<< HEAD
   email: ethan.arrowood@gmail.com
   api_key:
     secure: JRGzYz8K4ZOmQD9Fj4TgkcNWVmmpN5S9mMYICPEf433dT7Szt/hCUbJV9kZiv+6uoT1cQeO5OUZTa7a4ubTXvzlGMBWYww7T75BVVteIn85klbPT+LogpSORG12lDkYDPAQebCvJEZG6V5G6TV0Qg7ptJRz+cS7TVR5Qibn2oAAnJq6ivg/RId+t9n5DRXzDOgnJCHiI+OIAG4r10FYhzgeWAKFXxDAkpfil4T1wW1tI047oLsfxHBBJousw404gHYHE9fsho82Nztdt6K6jAwXXFTBTRkXCqqSQwTnEEzjhHOKUxa7Ej/+kvrfbibnHs7aCTPhfTKDP0lnLT0Ypty/uG4DdnywnkKXBU/OJ0E69XKg+2W7m3miKVmO3YY59yGxjhj9RAtO2gjVMgRxqH6Vv40B/5leNZD5lwbueoOpu8eSDo8icmmgOw0X6j9ww2uQptQSiL3diWiSZ0mxFOhzFhRJewtcW/ia4/0txGy9fUXmghDK7uNw0geOvuDlC3YFqkJXQXWDYGNUUFOPPliZszD4SUHDl/461VRj3O3zG5Le5adYSdy+yVJFMvdzqgJQAmZlrMui23a4XkiJ0rYbYUFKGoPsbouocmSmA+47AjDt1qaNgwUmLt9pTHK2Q+/rzLqkIRYtZKtyJWaJg0wdPknYJkWkaS3bQlLH5QhU=
-=======
-  email: "ethan.arrowood@gmail.com"
-  api_key:
->>>>>>> 4e0feb7e6bba82a76fb3517ba95bb920707263f8
   on:
     branch: master
 after_success: npm run coverage
