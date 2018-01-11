@@ -1,20 +1,20 @@
 language: node_js
-
 notifications:
   email:
     recipients:
-      - ethan.arrowood@gmail.com
-    on_success: never # default: change
-    on_failure: always # default: always
-
+    - ethan.arrowood@gmail.com
+    on_success: never
+    on_failure: always
 node_js:
-  - "node"
-
+- node
 deploy:
   provider: npm
-  email: "ethan.arrowood@gmail.com"
-  api_key: "f6ac5dac-b27d-4ed2-b7d8-2344646cd6c4"
+  email: ethan.arrowood@gmail.com
+  api_key:
+    secure: JRGzYz8K4ZOmQD9Fj4TgkcNWVmmpN5S9mMYICPEf433dT7Szt/hCUbJV9kZiv+6uoT1cQeO5OUZTa7a4ubTXvzlGMBWYww7T75BVVteIn85klbPT+LogpSORG12lDkYDPAQebCvJEZG6V5G6TV0Qg7ptJRz+cS7TVR5Qibn2oAAnJq6ivg/RId+t9n5DRXzDOgnJCHiI+OIAG4r10FYhzgeWAKFXxDAkpfil4T1wW1tI047oLsfxHBBJousw404gHYHE9fsho82Nztdt6K6jAwXXFTBTRkXCqqSQwTnEEzjhHOKUxa7Ej/+kvrfbibnHs7aCTPhfTKDP0lnLT0Ypty/uG4DdnywnkKXBU/OJ0E69XKg+2W7m3miKVmO3YY59yGxjhj9RAtO2gjVMgRxqH6Vv40B/5leNZD5lwbueoOpu8eSDo8icmmgOw0X6j9ww2uQptQSiL3diWiSZ0mxFOhzFhRJewtcW/ia4/0txGy9fUXmghDK7uNw0geOvuDlC3YFqkJXQXWDYGNUUFOPPliZszD4SUHDl/461VRj3O3zG5Le5adYSdy+yVJFMvdzqgJQAmZlrMui23a4XkiJ0rYbYUFKGoPsbouocmSmA+47AjDt1qaNgwUmLt9pTHK2Q+/rzLqkIRYtZKtyJWaJg0wdPknYJkWkaS3bQlLH5QhU=
   on:
     branch: master
-
 after_success: npm run coverage
+env:
+  global:
+    secure: ApJ9L9RiqjqxHKTjjYbhhhOX1xBOAmKD0fziHnVuBubKVTd8s5pbcsqk7+swfiWIAdEJLGZRVm9M9DbzPlYBccLsuveZmp8vBHBFawq61b6rCALnIcNOxJDWCd1jl14I6d4tU33rPzn5CbqL+OBwjsE1c45ZcRvYIlA61WhdYTGwX6TWjF5JXAtvsiSt6Dr90/P2KL2zN25pYFM6oBsCGj5+s9mf4hhVXMaGc3e6AIwGQo70d48bchlUwtXQQMNKrQr0k/naGWG854gh8eqqd9mUhba23OOMnHQig2BmS58JJA44hZ6dO2QocXULANxiW/9P8k7wjBuW08p+iFV9j4WnT1GJoqZ0tQvTbz+x0nucQLuMGwlHKtg5elxV0xX5rwcZLRPZ7TFc27m5u+59SJKF+nmYk4sAh0sDFIp2APhHJ1JGEQe5AGlmyePKOiPjhtiqVDczRHfzDy2rJWqskQiUpJ6c4Z5SFCR5SWvl5zapxMw1ALwqxRQPiw/EEZo/rS035zlmaZBGgyxHz+0wvpRtf1pkGZWEF1P3T27q98exMC1LrSVHQRGxXJysrD5SEm51uOr5yLYudkG8XeGuRTD3dCAoOzL0AKK0CArX++atrxYfp+jCu20VcD/tBiWkWq8HPtsLJvsI2NyKG40beT17jglNkb13Nm6siCJr4ZU=

@@ -1,5 +1,8 @@
 # HarperDB Node.JS Driver [![Build Status](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver.svg?branch=master)](https://travis-ci.org/Ethan-Arrowood/harperdb-nodejs-driver) [![Coverage Status](https://coveralls.io/repos/github/Ethan-Arrowood/harperdb-nodejs-driver/badge.svg?branch=master)](https://coveralls.io/github/Ethan-Arrowood/harperdb-nodejs-driver?branch=master)
 
+## Deprecating 
+I'll be deprecating this package and will be replacing it with something much more succinct. Furthermore, this isn't exactly a database driver so the naming is confusing. You can check out the progress on the new package [here](https://github.com/Ethan-Arrowood/harperdb-connect)
+
 [![https://nodei.co/npm/harperdb-nodejs-driver.png?downloads=true&downloadRank=true&stars=true](https://nodei.co/npm/harperdb-nodejs-driver.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/harperdb-nodejs-driver)
 
 
